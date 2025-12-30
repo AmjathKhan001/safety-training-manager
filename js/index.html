@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSE Calculator | Professional Health, Safety & Environment Tools</title>
+    <meta name="description" content="Free professional HSE calculators, safety tools, and resources for workplace safety, risk assessment, and environmental compliance">
+    <meta name="keywords" content="HSE calculator, safety tools, risk assessment, PPE, fire safety, occupational health">
+    <meta name="author" content="Amjath Khan">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HSE Calculator | Professional Safety Tools">
+    <meta property="og:description" content="Free HSE calculators and safety tools for professionals">
+    <meta property="og:image" content="https://www.hsecalculator.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://www.hsecalculator.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HSE Calculator | Professional Safety Tools">
+    <meta name="twitter:description" content="Free HSE calculators and safety tools for professionals">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.hsecalculator.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRTSHLC01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DRRTSHLC01');
+    </script>
+    
+    <!-- Google Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687860250561653" crossorigin="anonymous"></script>
+    
+    <!-- HTML2PDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="HSE Calculator Logo" class="logo-img">
+                    <span>HSE Calculator</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                    <a href="pages/all-calculators.html" class="nav-link"><i class="fas fa-calculator"></i> All Calculators</a>
+                    <a href="pages/products.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Safety Products</a>
+                    <a href="pages/tools.html" class="nav-link"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="pages/blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="pages/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional HSE Calculators & Safety Tools</h1>
+                <p class="hero-subtitle">Free, comprehensive tools for Health, Safety, and Environment professionals to assess risks, ensure compliance, and improve workplace safety.</p>
+                <div class="hero-buttons">
+                    <a href="calculators/risk-assessment.html" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Start Calculating
+                    </a>
+                    <a href="pages/products.html" class="btn btn-secondary">
+                        <i class="fas fa-shield-alt"></i> View Safety Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Counter -->
+    <section class="visitor-counter">
+        <div class="container">
+            <div class="counter-card">
+                <i class="fas fa-eye counter-icon"></i>
+                <div class="counter-content">
+                    <h3>Website Visitors</h3>
+                    <div class="counter-number" id="visitorCount">Loading...</div>
+                    <p>Professionals using our safety tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Calculators -->
+    <section class="featured-calculators">
+        <div class="container">
+            <h2 class="section-title">All HSE Calculators (11 Professional Tools)</h2>
+            <p class="section-subtitle">Essential tools for safety professionals - Click any calculator to start</p>
+            
+            <div class="calculators-grid">
+                <!-- Risk Assessment Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Risk Assessment</h3>
+                        <p>Calculate risk levels based on probability and severity to prioritize safety measures.</p>
+                        <a href="calculators/risk-assessment.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Noise Exposure Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Noise Exposure</h3>
+                        <p>Determine daily noise exposure and compliance with occupational limits.</p>
+                        <a href="calculators/noise-exposure.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chemical Exposure Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Chemical Exposure</h3>
+                        <p>Calculate chemical exposure levels and determine compliance with PELs.</p>
+                        <a href="calculators/chemical-exposure.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Incident Rate Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Incident Rate</h3>
+                        <p>Calculate TRIR, DART, and other safety performance metrics.</p>
+                        <a href="calculators/incident-rate.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fall Protection Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Fall Protection</h3>
+                        <p>Calculate fall clearance, deceleration distance, and anchor strength requirements.</p>
+                        <a href="calculators/fall-protection.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Heat Stress Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-temperature-high"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Heat Stress</h3>
+                        <p>Calculate WBGT index, heat stress risk, and recommended work/rest cycles.</p>
+                        <a href="calculators/heat-stress.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ventilation Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Ventilation</h3>
+                        <p>Calculate air changes per hour, ventilation rates, and duct sizing for industrial spaces.</p>
+                        <a href="calculators/ventilation.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PPE Selection Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>PPE Selection</h3>
+                        <p>Determine appropriate Personal Protective Equipment based on hazard assessment.</p>
+                        <a href="calculators/ppe-selection.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lifting Safety Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Lifting Safety</h3>
+                        <p>Calculate safe lifting limits, crane capacities, and manual handling risks.</p>
+                        <a href="calculators/lifting-safety.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Environmental Impact Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Environmental Impact</h3>
+                        <p>Calculate carbon footprint, waste generation, and environmental compliance metrics.</p>
+                        <a href="calculators/environmental-impact.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Safety Training Calculator -->
+                <div class="calculator-card">
+                    <div class="calculator-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="calculator-content">
+                        <h3>Safety Training</h3>
+                        <p>Calculate training effectiveness, ROI, and schedule safety training sessions.</p>
+                        <a href="calculators/safety-training.html" class="btn btn-primary btn-small">
+                            <i class="fas fa-play-circle"></i> Use Calculator
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="note">All calculators are completely free to use. Bookmark this page for quick access!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amazon Clearance Banner -->
+    <section class="amazon-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h3><i class="fas fa-fire"></i> Amazon Safety Products Clearance</h3>
+                    <p>Limited Time Offer - Up to 70% OFF on Quality PPE & Safety Equipment</p>
+                </div>
+                <a href="https://amzn.to/4p8ceG6" target="_blank" class="btn btn-warning">
+                    <i class="fas fa-bolt"></i> Shop Deals Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Safety Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Recommended Safety Products</h2>
+            <p class="section-subtitle">Quality PPE and safety equipment from trusted suppliers</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/products/ppe-kit.jpg" alt="PPE Kit" onerror="this.src='assets/products/default.jpg'">
+                        <span class="product-category">PPE Kit</span>
+                    </div>
+                    <div class="product-content">
+                        <h4>Personal Protective Equipment KIT (PPE KIT)</h4>
+                        <a href="https://amzn.to/4bcAm6e" target="_blank" class="btn btn-primary btn-small">
+                            <i class="fas fa-external-link-alt"></i> View on Amazon
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/products/gas-mask.jpg" alt="Gas Mask" onerror="this.src='assets/products/default.jpg'">
+                        <span class="product-category">Respiratory Protection</span>
+                    </div>
+                    <div class="product-content">
+                        <h4>Serplex Gas Mask Set Respirator</h4>
+                        <a href="https://amzn.to/4s4Fr6K" target="_blank" class="btn btn-primary btn-small">
+                            <i class="fas fa-external-link-alt"></i> View on Amazon
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/products/disposable-gown.jpg" alt="Disposable Gown" onerror="this.src='assets/products/default.jpg'">
+                        <span class="product-category">Disposable PPE</span>
+                    </div>
+                    <div class="product-content">
+                        <h4>Non Woven Polypropylene Disposable Gown</h4>
+                        <a href="https://amzn.to/49rqlRr" target="_blank" class="btn btn-primary btn-small">
+                            <i class="fas fa-external-link-alt"></i> View on Amazon
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/products/safety-harness.jpg" alt="Safety Harness" onerror="this.src='assets/products/default.jpg'">
+                        <span class="product-category">Fall Protection</span>
+                    </div>
+                    <div class="product-content">
+                        <h4>CF IND Full Body Safety Harness</h4>
+                        <a href="https://amzn.to/4jh3StM" target="_blank" class="btn btn-primary btn-small">
+                            <i class="fas fa-external-link-alt"></i> View on Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="pages/products.html" class="btn btn-outline">
+                    <i class="fas fa-store"></i> View All Safety Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section - Optimized Size -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-card compact">
+                <div class="support-content">
+                    <h3>Support Our Work</h3>
+                    <p>Help us maintain and improve these free HSE tools.</p>
+                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-coffee">
+                        <i class="fas fa-mug-hot"></i> Buy Me a Coffee
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Sharing - Optimized Size -->
+    <section class="social-sharing">
+        <div class="container">
+            <div class="social-card compact">
+                <h3>Share These Tools</h3>
+                <p>Help other safety professionals discover these resources</p>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://hse-calculator.vercel.app" target="_blank" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://hse-calculator.vercel.app&text=Check%20out%20these%20professional%20HSE%20calculators%20and%20safety%20tools!" target="_blank" class="social-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://hse-calculator.vercel.app" target="_blank" class="social-btn linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Professional%20HSE%20Calculators:%20https://hse-calculator.vercel.app" target="_blank" class="social-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="HSE Calculator Logo" class="logo-img">
+                        <span>HSE Calculator</span>
+                    </a>
+                    <p>Professional tools for health, safety, and environment professionals.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/amjikhan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank"><i class="fas fa-feather"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/all-calculators.html">All Calculators</a></li>
+                        <li><a href="pages/products.html">Safety Products</a></li>
+                        <li><a href="pages/tools.html">Tools</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                        <li><a href="pages/terms.html">Terms of Use</a></li>
+                        <li><a href="pages/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="pages/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@amjathkhan.com">contact@amjathkhan.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919750816163">+91-9750816163</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://www.amjathkhan.com/" target="_blank">www.amjathkhan.com</a></li>
+                    </ul>
+                    <a href="pages/contact.html" class="btn btn-primary btn-small mt-2">
+                        <i class="fas fa-paper-plane"></i> Contact Form
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 HSE Calculator. All rights reserved.</p>
+                <p>Professional tools for workplace safety and compliance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Visitor Counter Update
+            updateVisitorCounter();
+        });
+        
+        // Visitor Counter Function
+        function updateVisitorCounter() {
+            const visitorCountElement = document.getElementById('visitorCount');
+            if (!visitorCountElement) return;
+            
+            // Get current count from localStorage or start with 2847
+            let currentCount = parseInt(localStorage.getItem('hseVisitors')) || 2847;
+            
+            // Add random increment (between 1-10)
+            const increment = Math.floor(Math.random() * 10) + 1;
+            currentCount += increment;
+            
+            // Save to localStorage
+            localStorage.setItem('hseVisitors', currentCount.toString());
+            
+            // Update display with comma formatting
+            visitorCountElement.textContent = currentCount.toLocaleString();
+            
+            // Update every 30 minutes
+            setTimeout(updateVisitorCounter, 30 * 60 * 1000);
+        }
+    </script>
+</body>
+</html>
