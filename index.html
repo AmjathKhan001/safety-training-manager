@@ -1,1 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Training Manager | Free Certificates & Attendance Sheets</title>
+    <meta name="description" content="Free professional safety training certificates, attendance sheets, and compliance documentation generator for HSE professionals">
+    <meta name="keywords" content="safety training, certificate generator, attendance sheet, HSE documentation, free safety tools">
+    <meta name="author" content="Amjath Khan">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Safety Training Manager | Free Certificates & Attendance Sheets">
+    <meta property="og:description" content="Generate professional safety training certificates and attendance sheets for free">
+    <meta property="og:image" content="https://safety-training-manager.vercel.app/assets/og-image.jpg">
+    <meta property="og:url" content="https://safety-training-manager.vercel.app">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Safety Training Manager">
+    <meta name="twitter:description" content="Free safety training certificates and documentation tools">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://safety-training-manager.vercel.app">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRRTSHLC01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DRRTSHLC01');
+    </script>
+    
+    <!-- Google Auto Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687860250561653" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-certificate logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">Safety Training</span>
+                        <span class="logo-sub">Manager</span>
+                    </div>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                    <a href="attendance.html" class="nav-link"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a>
+                    <a href="certificate.html" class="nav-link"><i class="fas fa-award"></i> Certificate</a>
+                    <a href="pages/blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="pages/tools.html" class="nav-link"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Create Professional Safety Training Documentation</h1>
+                <p class="hero-subtitle">Free tools to generate certificates, attendance sheets, and compliance reports for safety training sessions. Save time and maintain professional standards.</p>
+                <div class="hero-buttons">
+                    <a href="attendance.html" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Create Attendance Sheet
+                    </a>
+                    <a href="certificate.html" class="btn btn-secondary">
+                        <i class="fas fa-award"></i> Generate Certificate
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span id="visitorCount">Loading...</span> Users Served
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span id="docCount">10,000+</span> Documents Created
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span>100%</span> Free Forever
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need for Training Documentation</h2>
+            <p class="section-subtitle">Professional tools designed specifically for safety trainers and HSE professionals</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Attendance Sheets</h3>
+                    <p>Create organized participant lists with signature columns, employee details, and training information.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Customizable columns</li>
+                        <li><i class="fas fa-check"></i> Automatic numbering</li>
+                        <li><i class="fas fa-check"></i> PDF/Print export</li>
+                        <li><i class="fas fa-check"></i> Trainer signature section</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Training Certificates</h3>
+                    <p>Generate professional certificates with multiple templates, custom text, and validation features.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 5+ professional templates</li>
+                        <li><i class="fas fa-check"></i> Custom text and logos</li>
+                        <li><i class="fas fa-check"></i> Unique certificate IDs</li>
+                        <li><i class="fas fa-check"></i> High-resolution PDFs</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Compliance Reports</h3>
+                    <p>Generate training completion reports for compliance documentation and audit purposes.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Training summary reports</li>
+                        <li><i class="fas fa-check"></i> Participant completion lists</li>
+                        <li><i class="fas fa-check"></i> Date validation</li>
+                        <li><i class="fas fa-check"></i> Multiple export formats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Select Tool</h3>
+                        <p>Choose between attendance sheet or certificate generator based on your needs.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Enter Details</h3>
+                        <p>Fill in training information, participant details, and customize the design.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Preview & Edit</h3>
+                        <p>Review your document, make any necessary changes, and see the final result.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Download/Print</h3>
+                        <p>Export as PDF, print directly, or share digitally with participants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amazon Banner -->
+    <section class="amazon-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h3><i class="fas fa-fire"></i> Amazon Safety Store Clearance</h3>
+                    <p>Up to 70% OFF on Quality PPE & Safety Training Equipment</p>
+                </div>
+                <a href="https://amzn.to/4p8ceG6" target="_blank" class="btn btn-warning">
+                    <i class="fas fa-bolt"></i> Shop Safety Deals
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Directory -->
+    <section class="tools-directory" id="tools">
+        <div class="container">
+            <h2 class="section-title">More Safety & Utility Tools</h2>
+            <p class="section-subtitle">Explore our complete collection of professional tools</p>
+            
+            <div class="tools-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="hse">HSE Tools</button>
+                    <button class="tab-btn" data-tab="fire">Fire Safety</button>
+                    <button class="tab-btn" data-tab="utility">Utility Tools</button>
+                    <button class="tab-btn" data-tab="design">Design Tools</button>
+                    <button class="tab-btn" data-tab="ppe">PPE Marts</button>
+                </div>
+                
+                <div class="tab-content active" id="hse-tab">
+                    <div class="tools-grid">
+                        <a href="https://www.hsecalculator.com/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4>HSE Calculators</h4>
+                            <p>Professional health, safety & environment calculators</p>
+                        </a>
+                        <a href="https://hse-toolkit.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-toolbox"></i>
+                            </div>
+                            <h4>HSE Toolkit</h4>
+                            <p>Complete HSE tools and resources collection</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="fire-tab">
+                    <div class="tools-grid">
+                        <a href="https://safetyguide360-ceilingmounted-firee.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-fire-extinguisher"></i>
+                            </div>
+                            <h4>Ceiling Mounted Fire Extinguisher Estimator</h4>
+                            <p>Estimate requirements for ceiling mounted extinguishers</p>
+                        </a>
+                        <a href="https://www.firesafetytool.com/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h4>Fire Safety Calculators</h4>
+                            <p>Comprehensive fire safety calculation tools</p>
+                        </a>
+                        <a href="https://safetyguide360-fire-extinguisher-au.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4>Fire Extinguisher Health Checkup Audit Tool</h4>
+                            <p>Audit and maintenance checklist for fire extinguishers</p>
+                        </a>
+                        <a href="https://safetyguide360-firesafety-assessmen.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4>Fire Safety Assessment Tool</h4>
+                            <p>Complete fire safety assessment and evaluation</p>
+                        </a>
+                        <a href="https://safetyguide360-fire-extinguisher-ca.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4>Fire Extinguisher Estimation Tool</h4>
+                            <p>Calculate fire extinguisher requirements</p>
+                        </a>
+                        <a href="https://safetyguide360-kitchen-fire-suppres.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h4>Kitchen Suppression System Estimation</h4>
+                            <p>Kitchen fire suppression system calculations</p>
+                        </a>
+                        <a href="https://safetyguide360-room-flooding-system.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h4>Room Flooding System Estimator</h4>
+                            <p>Calculate room flooding system requirements</p>
+                        </a>
+                        <a href="https://safetyguide360-panel-fire-suppressi.vercel.app/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Panel Fire Suppression Calculator</h4>
+                            <p>Electrical panel fire suppression calculations</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="utility-tab">
+                    <div class="tools-grid">
+                        <a href="https://www.dailysmarttool.com/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Daily Smart Tool</h4>
+                            <p>Everyday utility tools and calculators</p>
+                        </a>
+                        <a href="https://www.webtoolsdaily.com/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Web Tools Daily</h4>
+                            <p>Collection of web-based utility tools</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="design-tab">
+                    <div class="tools-grid">
+                        <a href="https://www.auratext.online/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>Aura Text</h4>
+                            <p>Advanced text design and formatting tools</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="ppe-tab">
+                    <div class="tools-grid">
+                        <a href="https://www.ppemarts.com/" target="_blank" class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h4>PPE Marts</h4>
+                            <p>Personal Protective Equipment store & calculator</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="support-card">
+                <div class="support-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="support-content">
+                    <h3>Support Our Free Tools</h3>
+                    <p>These tools are completely free. If you find them useful, consider supporting our work to help maintain and improve them.</p>
+                    <div class="support-buttons">
+                        <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-coffee">
+                            <i class="fas fa-mug-hot"></i> Buy Me a Coffee
+                        </a>
+                        <a href="#share" class="btn btn-outline" id="shareBtn">
+                            <i class="fas fa-share-alt"></i> Share Tool
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Sharing Modal -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Share Safety Training Manager</h3>
+            <p>Help other safety professionals discover this free tool</p>
+            <div class="social-share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://safety-training-manager.vercel.app" target="_blank" class="share-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://safety-training-manager.vercel.app&text=Check%20out%20this%20free%20Safety%20Training%20Manager%20for%20creating%20certificates%20and%20attendance%20sheets!" target="_blank" class="share-btn twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://safety-training-manager.vercel.app" target="_blank" class="share-btn linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://api.whatsapp.com/send?text=Free%20Safety%20Training%20Manager%20for%20certificates%20and%20attendance%20sheets:%20https://safety-training-manager.vercel.app" target="_blank" class="share-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="mailto:?subject=Free Safety Training Manager&body=Check out this free tool for creating safety training certificates and attendance sheets: https://safety-training-manager.vercel.app" class="share-btn email">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+            <div class="copy-link">
+                <input type="text" value="https://safety-training-manager.vercel.app" id="shareLink" readonly>
+                <button class="btn btn-small" id="copyLinkBtn">
+                    <i class="fas fa-copy"></i> Copy Link
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Support</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions, feedback, or need help with our tools? We're here to help!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:contact@amjathkhan.com">contact@amjathkhan.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+919750816163">+91-9750816163</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Website</h4>
+                                <a href="https://www.amjathkhan.com/" target="_blank">www.amjathkhan.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank" class="social-link">
+                            <i class="fas fa-feather"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/amjikhan" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <span class="logo-main">Safety Training</span>
+                            <span class="logo-sub">Manager</span>
+                        </div>
+                    </a>
+                    <p>Free professional tools for safety training documentation. Create certificates, attendance sheets, and compliance reports.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/amjikhan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank"><i class="fas fa-feather"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Tools</h4>
+                    <ul>
+                        <li><a href="attendance.html"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a></li>
+                        <li><a href="certificate.html"><i class="fas fa-award"></i> Certificate Generator</a></li>
+                        <li><a href="#tools"><i class="fas fa-tools"></i> More Safety Tools</a></li>
+                        <li><a href="pages/blog.html"><i class="fas fa-blog"></i> Blog & Articles</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="pages/terms.html"><i class="fas fa-file-contract"></i> Terms of Use</a></li>
+                        <li><a href="pages/affiliate-disclosure.html"><i class="fas fa-handshake"></i> Affiliate Disclosure</a></li>
+                        <li><a href="pages/sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Visitor Counter</h4>
+                    <div class="visitor-counter">
+                        <i class="fas fa-eye"></i>
+                        <div class="counter">
+                            <span id="footerVisitorCount">Loading...</span>
+                            <small>Total Visitors</small>
+                        </div>
+                    </div>
+                    <p class="mt-2">This tool is 100% free and supported by donations.</p>
+                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-coffee btn-small mt-2">
+                        <i class="fas fa-mug-hot"></i> Support Us
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safety Training Manager. All rights reserved.</p>
+                <p>Part of the <a href="https://www.hsecalculator.com/" target="_blank">HSE Tools Network</a> | Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Safety Professionals</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-tab`).classList.add('active');
+                });
+            });
+            
+            // Share modal functionality
+            const shareBtn = document.getElementById('shareBtn');
+            const shareModal = document.getElementById('shareModal');
+            const closeModal = document.querySelector('.close-modal');
+            const copyLinkBtn = document.getElementById('copyLinkBtn');
+            const shareLink = document.getElementById('shareLink');
+            
+            if (shareBtn) {
+                shareBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    shareModal.style.display = 'block';
+                });
+            }
+            
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    shareModal.style.display = 'none';
+                });
+            }
+            
+            if (copyLinkBtn) {
+                copyLinkBtn.addEventListener('click', () => {
+                    shareLink.select();
+                    document.execCommand('copy');
+                    copyLinkBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => {
+                        copyLinkBtn.innerHTML = '<i class="fas fa-copy"></i> Copy Link';
+                    }, 2000);
+                });
+            }
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === shareModal) {
+                    shareModal.style.display = 'none';
+                }
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will contact you soon.');
+                    contactForm.reset();
+                });
+            }
+            
+            // Update visitor counter in footer
+            updateFooterCounter();
+        });
+        
+        // Function to update footer counter
+        function updateFooterCounter() {
+            const counterElement = document.getElementById('footerVisitorCount');
+            if (!counterElement) return;
+            
+            let currentCount = parseInt(localStorage.getItem('trainingVisitors')) || 1524;
+            currentCount++;
+            localStorage.setItem('trainingVisitors', currentCount.toString());
+            
+            // Update both counters
+            counterElement.textContent = currentCount.toLocaleString();
+            
+            const mainCounter = document.getElementById('visitorCount');
+            if (mainCounter) {
+                mainCounter.textContent = currentCount.toLocaleString();
+            }
+        }
+    </script>
+</body>
+</html>
