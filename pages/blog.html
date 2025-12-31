@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Training Blog | Tips, Guides & Best Practices</title>
+    <meta name="description" content="Expert articles on safety training, certificate management, attendance tracking, and HSE best practices. Learn how to improve your training documentation.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        .blog-page {
+            padding: 100px 0 60px;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-title {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .blog-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        
+        .articles-grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .article-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        
+        .article-content {
+            padding: 25px;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .article-meta i {
+            color: #3498db;
+        }
+        
+        .article-category {
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .article-title {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-excerpt {
+            color: #5d6d7e;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .article-link {
+            color: #3498db;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+        
+        .article-link:hover {
+            gap: 12px;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .sidebar-widget {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .widget-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .categories-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .categories-list li {
+            margin-bottom: 12px;
+        }
+        
+        .categories-list a {
+            color: #5d6d7e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .categories-list a:hover {
+            color: #3498db;
+            padding-left: 5px;
+        }
+        
+        .category-count {
+            background: #f0f0f0;
+            color: #7f8c8d;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .recent-posts .post-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .recent-posts .post-image {
+            width: 80px;
+            height: 60px;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .recent-posts .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .recent-posts .post-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .recent-posts .post-date {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+        
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background: #f0f0f0;
+            color: #5d6d7e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .tag:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .newsletter-form {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        
+        .newsletter-form .widget-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .newsletter-form p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            width: 100%;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background: #27ae60;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        
+        .pagination a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            color: #5d6d7e;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination a:hover,
+        .pagination a.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .blog-search {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .blog-search input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .blog-search input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .blog-search button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 992px) {
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-page {
+                padding: 80px 0 40px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-certificate logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">Safety Training</span>
+                        <span class="logo-sub">Manager</span>
+                    </div>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="../attendance.html" class="nav-link"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a>
+                    <a href="../certificate.html" class="nav-link"><i class="fas fa-award"></i> Certificate</a>
+                    <a href="blog.html" class="nav-link active"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="tools.html" class="nav-link"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="../index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Page -->
+    <section class="blog-page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Safety Training Blog</h1>
+                <p class="page-subtitle">Expert insights, tips, and best practices for safety training documentation and management</p>
+                
+                <div class="blog-search">
+                    <input type="text" placeholder="Search articles...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            
+            <div class="blog-container">
+                <!-- Main Content -->
+                <main class="main-content">
+                    <div class="articles-grid">
+                        <!-- Article 1 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/training-documentation.jpg" alt="Training Documentation Best Practices">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Best Practices</span>
+                                    <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h2 class="article-title">5 Essential Elements of Professional Training Documentation</h2>
+                                <p class="article-excerpt">Learn how to create comprehensive training records that meet regulatory requirements and improve safety outcomes. Essential tips for trainers and safety professionals.</p>
+                                <a href="article-1.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 2 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/certificate-design.jpg" alt="Certificate Design Principles">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Design</span>
+                                    <span><i class="far fa-calendar"></i> March 10, 2025</span>
+                                    <span><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h2 class="article-title">How to Design Effective Training Certificates That Employees Value</h2>
+                                <p class="article-excerpt">Discover design principles that make training certificates meaningful and motivate employees to display them proudly. Includes templates you can use.</p>
+                                <a href="article-2.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 3 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/digital-tools.jpg" alt="Digital Tools for Safety Training">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Technology</span>
+                                    <span><i class="far fa-calendar"></i> March 5, 2025</span>
+                                    <span><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h2 class="article-title">Top Digital Tools Every Safety Trainer Should Know in 2025</h2>
+                                <p class="article-excerpt">Explore the latest digital tools that are revolutionizing safety training management, from attendance tracking to certificate generation.</p>
+                                <a href="article-3.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 4 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/compliance.jpg" alt="Compliance Requirements">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Compliance</span>
+                                    <span><i class="far fa-calendar"></i> February 28, 2025</span>
+                                    <span><i class="far fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h2 class="article-title">Understanding OSHA and ISO Requirements for Training Records</h2>
+                                <p class="article-excerpt">A comprehensive guide to meeting regulatory requirements for safety training documentation across different industries and standards.</p>
+                                <a href="article-4.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 5 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/attendance-tracking.jpg" alt="Attendance Tracking Methods">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Management</span>
+                                    <span><i class="far fa-calendar"></i> February 20, 2025</span>
+                                    <span><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h2 class="article-title">Effective Attendance Tracking: From Paper Sheets to Digital Solutions</h2>
+                                <p class="article-excerpt">Compare different methods for tracking training attendance and learn how to choose the right system for your organization's needs.</p>
+                                <a href="article-5.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Article 6 -->
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="../assets/blog/audit-preparedness.jpg" alt="Audit Preparedness">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-category">Audit</span>
+                                    <span><i class="far fa-calendar"></i> February 15, 2025</span>
+                                    <span><i class="far fa-clock"></i> 8 min read</span>
+                                </div>
+                                <h2 class="article-title">How to Prepare Your Training Records for Safety Audits</h2>
+                                <p class="article-excerpt">Step-by-step guide to organizing and presenting your training documentation for successful safety audits and inspections.</p>
+                                <a href="article-6.html" class="article-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </main>
+                
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">Best Practices <span class="category-count">12</span></a></li>
+                            <li><a href="#">Compliance <span class="category-count">8</span></a></li>
+                            <li><a href="#">Technology <span class="category-count">6</span></a></li>
+                            <li><a href="#">Management <span class="category-count">10</span></a></li>
+                            <li><a href="#">Design <span class="category-count">5</span></a></li>
+                            <li><a href="#">Audit <span class="category-count">7</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget recent-posts">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div class="post-item">
+                            <div class="post-image">
+                                <img src="../assets/blog/training-documentation.jpg" alt="Training Documentation">
+                            </div>
+                            <div class="post-content">
+                                <h4>5 Essential Elements of Professional Training Documentation</h4>
+                                <div class="post-date">March 15, 2025</div>
+                            </div>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-image">
+                                <img src="../assets/blog/certificate-design.jpg" alt="Certificate Design">
+                            </div>
+                            <div class="post-content">
+                                <h4>How to Design Effective Training Certificates</h4>
+                                <div class="post-date">March 10, 2025</div>
+                            </div>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-image">
+                                <img src="../assets/blog/digital-tools.jpg" alt="Digital Tools">
+                            </div>
+                            <div class="post-content">
+                                <h4>Top Digital Tools for Safety Trainers</h4>
+                                <div class="post-date">March 5, 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">Training</a>
+                            <a href="#" class="tag">Safety</a>
+                            <a href="#" class="tag">Documentation</a>
+                            <a href="#" class="tag">Certificates</a>
+                            <a href="#" class="tag">Attendance</a>
+                            <a href="#" class="tag">Compliance</a>
+                            <a href="#" class="tag">OSHA</a>
+                            <a href="#" class="tag">ISO</a>
+                            <a href="#" class="tag">Audit</a>
+                            <a href="#" class="tag">Digital</a>
+                            <a href="#" class="tag">Tools</a>
+                            <a href="#" class="tag">Best Practices</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget newsletter-form">
+                        <h3 class="widget-title">Stay Updated</h3>
+                        <p>Subscribe to our newsletter for the latest articles, tips, and tools for safety training professionals.</p>
+                        <form id="newsletterForm">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="footer-logo">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <span class="logo-main">Safety Training</span>
+                            <span class="logo-sub">Manager</span>
+                        </div>
+                    </a>
+                    <p>Free professional tools for safety training documentation.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/amjikhan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank"><i class="fas fa-feather"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Tools</h4>
+                    <ul>
+                        <li><a href="../attendance.html"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a></li>
+                        <li><a href="../certificate.html"><i class="fas fa-award"></i> Certificate Generator</a></li>
+                        <li><a href="../index.html#tools"><i class="fas fa-tools"></i> More Safety Tools</a></li>
+                        <li><a href="blog.html"><i class="fas fa-blog"></i> Blog & Articles</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Use</a></li>
+                        <li><a href="affiliate-disclosure.html"><i class="fas fa-handshake"></i> Affiliate Disclosure</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Visitor Counter</h4>
+                    <div class="visitor-counter">
+                        <i class="fas fa-eye"></i>
+                        <div class="counter">
+                            <span id="footerVisitorCount">Loading...</span>
+                            <small>Total Visitors</small>
+                        </div>
+                    </div>
+                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-coffee btn-small mt-2">
+                        <i class="fas fa-mug-hot"></i> Support Us
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safety Training Manager. All rights reserved.</p>
+                <p>Part of the <a href="https://www.hsecalculator.com/" target="_blank">HSE Tools Network</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Newsletter form submission
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                    
+                    // Track event
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'newsletter_subscribe', {
+                            'event_category': 'engagement',
+                            'event_label': 'blog_page'
+                        });
+                    }
+                });
+            }
+            
+            // Search functionality
+            const searchInput = document.querySelector('.blog-search input');
+            const searchButton = document.querySelector('.blog-search button');
+            
+            if (searchButton) {
+                searchButton.addEventListener('click', function() {
+                    performSearch(searchInput.value);
+                });
+            }
+            
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch(this.value);
+                    }
+                });
+            }
+            
+            function performSearch(query) {
+                if (query.trim()) {
+                    // In a real application, this would redirect to search results
+                    alert(`Searching for: ${query}`);
+                    // For now, just track the search
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'search', {
+                            'search_term': query,
+                            'event_category': 'engagement'
+                        });
+                    }
+                }
+            }
+            
+            // Update visitor counter
+            updateVisitorCounter();
+        });
+        
+        function updateVisitorCounter() {
+            const counterElement = document.getElementById('footerVisitorCount');
+            if (!counterElement) return;
+            
+            let currentCount = parseInt(localStorage.getItem('trainingVisitors')) || 1524;
+            currentCount++;
+            localStorage.setItem('trainingVisitors', currentCount.toString());
+            counterElement.textContent = currentCount.toLocaleString();
+        }
+    </script>
+</body>
+</html>
