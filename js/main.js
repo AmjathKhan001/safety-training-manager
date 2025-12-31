@@ -970,3 +970,26 @@ window.SafetyTrainingManager = {
     showNotification: showNotification,
     trackEvent: trackEvent
 };
+// Update the active link highlighting
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a, .nav-links a');
+    
+    navLinks.forEach(link => {
+        // Remove active class from all
+        link.classList.remove('active');
+        
+        // Add active class to current page
+        if (link.getAttribute('href') === currentPage || 
+            link.getAttribute('href') === './' + currentPage.split('/').pop() ||
+            link.getAttribute('href') === currentPage.split('/').pop()) {
+            link.classList.add('active');
+        }
+        
+        // Special handling for training-programs
+        if (currentPage.includes('training-programs') && 
+            link.getAttribute('href') === 'training-programs.html') {
+            link.classList.add('active');
+        }
+    });
+});
