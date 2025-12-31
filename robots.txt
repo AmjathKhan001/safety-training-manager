@@ -1,1 +1,65 @@
+# Safety Training Manager - Robots.txt
+# https://safetytrainingmanager.com
 
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://safetytrainingmanager.com/sitemap.xml
+
+# Crawl delay (requests per second)
+Crawl-delay: 1
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+User-agent: Slurp
+Allow: /
+Disallow: /private/
+Crawl-delay: 1
+
+# Block specific bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Development environments
+User-agent: *
+Disallow: /*.php$
+Disallow: /*.asp$
+Disallow: /*.aspx$
+
+# Query strings and parameters
+Disallow: /*?*
+Allow: /*?print
+Allow: /*?pdf
+
+# Directories
+Disallow: /includes/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /logs/
+
+# Files
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /composer.json
+Disallow: /yarn.lock
+Disallow: /package-lock.json
