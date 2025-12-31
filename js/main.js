@@ -993,3 +993,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// Mobile menu toggle for fancy navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (navLinks && navLinks.classList.contains('active') && 
+            !event.target.closest('.navbar')) {
+            navLinks.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        }
+    });
+});
