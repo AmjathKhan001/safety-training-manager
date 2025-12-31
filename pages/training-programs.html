@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Training Programs | Professional Certifications & Courses</title>
+    <meta name="description" content="Find the best safety training programs, OSHA certifications, and professional development courses. Get certified and advance your safety career.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Page Specific CSS -->
+    <style>
+        .training-page {
+            padding: 100px 0 60px;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-title {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .training-intro {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .intro-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .intro-text h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .intro-text p {
+            color: #5d6d7e;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .intro-features {
+            background: #e8f4fc;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .intro-features h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .intro-features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .intro-features li {
+            color: #5d6d7e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .intro-features li i {
+            color: #3498db;
+            margin-top: 3px;
+        }
+        
+        /* Categories Section */
+        .categories-section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid #3498db;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: #e8f4fc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: #3498db;
+        }
+        
+        .category-card h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .category-card p {
+            color: #5d6d7e;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .program-count {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* Training Programs Section */
+        .programs-section {
+            margin-bottom: 50px;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .program-image {
+            height: 180px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .program-content {
+            padding: 25px;
+        }
+        
+        .program-category {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .program-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .program-description {
+            color: #5d6d7e;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .program-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-tag {
+            background: #f8f9fa;
+            color: #5d6d7e;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .feature-tag i {
+            color: #3498db;
+            font-size: 0.7rem;
+        }
+        
+        .program-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .program-link:hover {
+            background: #2980b9;
+            gap: 12px;
+        }
+        
+        /* Affiliate Disclosure */
+        .disclosure-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            border-left: 5px solid #2ecc71;
+        }
+        
+        .disclosure-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .disclosure-title i {
+            color: #2ecc71;
+        }
+        
+        .disclosure-content p {
+            color: #5d6d7e;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            margin: 50px 0;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .step-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .step-card p {
+            color: #5d6d7e;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .intro-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .programs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .training-page {
+                padding: 80px 0 40px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .categories-grid,
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .step-card {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <i class="fas fa-certificate logo-icon"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">Safety Training</span>
+                        <span class="logo-sub">Hub</span>
+                    </div>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="../attendance.html" class="nav-link"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a>
+                    <a href="../certificate.html" class="nav-link"><i class="fas fa-award"></i> Certificate</a>
+                    <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="tools.html" class="nav-link"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="training-programs.html" class="nav-link active"><i class="fas fa-graduation-cap"></i> Training Programs</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Training Programs Page -->
+    <section class="training-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Professional Safety Training Programs</h1>
+                <p class="page-subtitle">Find certified courses, OSHA training, and career advancement programs from trusted providers</p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="training-intro">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h3>Advance Your Safety Career</h3>
+                        <p>We've curated the best safety training programs from reputable providers. Whether you're starting your safety career or looking to advance, these certifications will enhance your skills and marketability.</p>
+                        <p>Our recommendations are based on industry reputation, course quality, and student success rates.</p>
+                    </div>
+                    <div class="intro-features">
+                        <h4>Why Get Certified?</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Higher earning potential</li>
+                            <li><i class="fas fa-check-circle"></i> Career advancement opportunities</li>
+                            <li><i class="fas fa-check-circle"></i> Industry recognition</li>
+                            <li><i class="fas fa-check-circle"></i> Regulatory compliance</li>
+                            <li><i class="fas fa-check-circle"></i> Enhanced job security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <section class="how-it-works">
+                <h2 class="section-title">How Our Training Program Works</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Browse Programs</h4>
+                        <p>Explore our curated selection of safety training programs across different categories and specializations.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Choose Your Course</h4>
+                        <p>Select the program that matches your career goals, schedule, and learning preferences.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Get Certified</h4>
+                        <p>Complete your training and receive industry-recognized certification to advance your career.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>Career Advancement</h4>
+                        <p>Use your new certification to qualify for better positions and higher salaries in safety management.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Training Categories -->
+            <section class="categories-section">
+                <h2 class="section-title">Training Categories</h2>
+                <div class="categories-grid">
+                    <!-- Category 1 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>OSHA Compliance</h3>
+                        <p>Complete OSHA training programs for construction, general industry, and specialized compliance requirements.</p>
+                        <span class="program-count">8 Programs</span>
+                    </div>
+                    
+                    <!-- Category 2 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>First Aid & CPR</h3>
+                        <p>Emergency response training including First Aid, CPR, AED, and workplace emergency preparedness.</p>
+                        <span class="program-count">6 Programs</span>
+                    </div>
+                    
+                    <!-- Category 3 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industrial Safety</h3>
+                        <p>Specialized training for manufacturing, chemical plants, oil & gas, and industrial environments.</p>
+                        <span class="program-count">12 Programs</span>
+                    </div>
+                    
+                    <!-- Category 4 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Construction Safety</h3>
+                        <p>Construction site safety, fall protection, scaffolding, excavation, and heavy equipment training.</p>
+                        <span class="program-count">10 Programs</span>
+                    </div>
+                    
+                    <!-- Category 5 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Professional Certifications</h3>
+                        <p>Advanced certifications for safety professionals (CSP, ASP, CHST, OHST, etc.).</p>
+                        <span class="program-count">7 Programs</span>
+                    </div>
+                    
+                    <!-- Category 6 -->
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Online Training</h3>
+                        <p>Flexible online courses for busy professionals with self-paced learning options.</p>
+                        <span class="program-count">15 Programs</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Training Programs -->
+            <section class="programs-section">
+                <h2 class="section-title">Featured Training Programs</h2>
+                <div class="programs-grid">
+                    <!-- Program 1 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">OSHA Compliance</span>
+                            <h3 class="program-title">OSHA 30-Hour Construction Safety</h3>
+                            <p class="program-description">Comprehensive safety training for construction supervisors and workers. Covers OSHA standards, hazard recognition, and prevention.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 30 Hours</span>
+                                <span class="feature-tag"><i class="fas fa-certificate"></i> DOL Card</span>
+                                <span class="feature-tag"><i class="fas fa-globe"></i> Online/In-person</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 2 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">First Aid & CPR</span>
+                            <h3 class="program-title">CPR/AED & First Aid Certification</h3>
+                            <p class="program-description">American Red Cross certified training for workplace emergencies. Includes adult/child CPR, AED use, and basic first aid.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 4-6 Hours</span>
+                                <span class="feature-tag"><i class="fas fa-certificate"></i> 2-Year Valid</span>
+                                <span class="feature-tag"><i class="fas fa-video"></i> Blended Learning</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 3 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">Professional Certification</span>
+                            <h3 class="program-title">Certified Safety Professional (CSP)</h3>
+                            <p class="program-description">Prep course for BCSP CSP certification. Advanced safety management, risk assessment, and regulatory compliance.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 40+ Hours</span>
+                                <span class="feature-tag"><i class="fas fa-certificate"></i> BCSP Recognized</span>
+                                <span class="feature-tag"><i class="fas fa-chart-line"></i> Career Advancement</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 4 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">Industrial Safety</span>
+                            <h3 class="program-title">HAZWOPER 40-Hour Training</h3>
+                            <p class="program-description">Hazardous waste operations training for workers at uncontrolled hazardous waste sites. OSHA 29 CFR 1910.120 compliant.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 40 Hours</span>
+                                <span class="feature-tag"><i class="fas fa-biohazard"></i> Hazardous Materials</span>
+                                <span class="feature-tag"><i class="fas fa-shield-alt"></i> PPE Training</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 5 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">Construction Safety</span>
+                            <h3 class="program-title">Fall Protection Competent Person</h3>
+                            <p class="program-description">Training for competent persons responsible for fall protection programs on construction sites. OSHA 1926 Subpart M.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 8 Hours</span>
+                                <span class="feature-tag"><i class="fas fa-exclamation-triangle"></i> High-Risk Focus</span>
+                                <span class="feature-tag"><i class="fas fa-clipboard-check"></i> Competent Person</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 6 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="program-content">
+                            <span class="program-category">Online Training</span>
+                            <h3 class="program-title">Workplace Violence Prevention</h3>
+                            <p class="program-description">Online course for recognizing, preventing, and responding to workplace violence. Essential for all workplaces.</p>
+                            <div class="program-features">
+                                <span class="feature-tag"><i class="fas fa-clock"></i> 2 Hours</span>
+                                <span class="feature-tag"><i class="fas fa-laptop-house"></i> Self-Paced</span>
+                                <span class="feature-tag"><i class="fas fa-file-certificate"></i> Immediate Certificate</span>
+                            </div>
+                            <a href="#" class="program-link">
+                                View Program Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Affiliate Disclosure -->
+            <div class="disclosure-section">
+                <h3 class="disclosure-title">
+                    <i class="fas fa-handshake"></i> Affiliate Disclosure
+                </h3>
+                <div class="disclosure-content">
+                    <p><strong>Transparency Notice:</strong> Safety Training Hub may earn commissions when you purchase training programs through our links. This helps support our free tools and resources.</p>
+                    <p><strong>Our Promise:</strong> We only recommend training programs we genuinely believe provide value to safety professionals. Our recommendations are based on course quality, provider reputation, and student outcomes.</p>
+                    <p><strong>No Extra Cost:</strong> Using our links does not increase the price you pay. In some cases, we may be able to secure exclusive discounts for our visitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="footer-logo">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <span class="logo-main">Safety Training</span>
+                            <span class="logo-sub">Hub</span>
+                        </div>
+                    </a>
+                    <p>Your central hub for safety training tools, certificates, and professional development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/amjikhan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank"><i class="fas fa-feather"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Tools</h4>
+                    <ul>
+                        <li><a href="../attendance.html"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a></li>
+                        <li><a href="../certificate.html"><i class="fas fa-award"></i> Certificate Generator</a></li>
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> Safety Tools</a></li>
+                        <li><a href="training-programs.html"><i class="fas fa-graduation-cap"></i> Training Programs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html"><i class="fas fa-blog"></i> Safety Blog</a></li>
+                        <li><a href="training-programs.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                        <li><a href="tools.html"><i class="fas fa-calculator"></i> HSE Calculators</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-file-alt"></i> Guides & Templates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Visitor Counter</h4>
+                    <div class="visitor-counter">
+                        <i class="fas fa-eye"></i>
+                        <div class="counter">
+                            <span id="footerVisitorCount">Loading...</span>
+                            <small>Total Visitors</small>
+                        </div>
+                    </div>
+                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-coffee btn-small mt-2">
+                        <i class="fas fa-mug-hot"></i> Support Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safety Training Hub. All rights reserved.</p>
+                <p>Part of the <a href="https://safetytoolkit.online" target="_blank">Safety Toolkit Network</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Update visitor counter
+            updateVisitorCounter();
+            
+            // Highlight active nav item
+            highlightActiveNav();
+            
+            // Program card click tracking (for future analytics)
+            setupProgramTracking();
+        });
+        
+        function updateVisitorCounter() {
+            const counterElement = document.getElementById('footerVisitorCount');
+            if (!counterElement) return;
+            
+            // Get current count or initialize
+            let currentCount = parseInt(localStorage.getItem('trainingHubVisitors')) || 1842;
+            
+            // Increment only on first visit in this session
+            if (!sessionStorage.getItem('hasVisitedTrainingHub')) {
+                currentCount++;
+                localStorage.setItem('trainingHubVisitors', currentCount.toString());
+                sessionStorage.setItem('hasVisitedTrainingHub', 'true');
+            }
+            
+            counterElement.textContent = currentCount.toLocaleString();
+        }
+        
+        function highlightActiveNav() {
+            const navLinksAll = document.querySelectorAll('.nav-links a');
+            const currentPage = 'training-programs.html';
+            
+            navLinksAll.forEach(link => {
+                if (link.getAttribute('href') === currentPage || 
+                    link.getAttribute('href') === './' + currentPage ||
+                    link.getAttribute('href') === '/pages/' + currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        
+        function setupProgramTracking() {
+            const programLinks = document.querySelectorAll('.program-link');
+            
+            programLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('Coming Soon! You can add your affiliate links to these program cards.');
+                        
+                        // Track interest for future optimization
+                        const programTitle = this.closest('.program-card').querySelector('.program-title').textContent;
+                        console.log('User interested in:', programTitle);
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
