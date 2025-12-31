@@ -1014,3 +1014,59 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+// Mobile menu toggle for all pages
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (navLinks && navLinks.classList.contains('active') && 
+            !event.target.closest('.navbar')) {
+            navLinks.classList.remove('active');
+            if (mobileToggle) {
+                mobileToggle.classList.remove('active');
+            }
+        }
+    });
+    
+    // Close menu when clicking a link (for single page navigation)
+    const navLinksAll = document.querySelectorAll('.nav-link');
+    navLinksAll.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (mobileToggle) {
+                    mobileToggle.classList.remove('active');
+                }
+            }
+        });
+    });
+    
+    // Highlight active page
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split('/').pop();
+    
+    navLinksAll.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        const linkPage = linkPath.split('/').pop();
+        
+        // Remove active class from all
+        link.classList.remove('active');
+        
+        // Add active class to current page
+        if (pageName === linkPage || 
+            (pageName === '' && linkPage === 'index.html') ||
+            (currentPath.includes(linkPage.replace('.html', '')) && linkPage !== 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+});
