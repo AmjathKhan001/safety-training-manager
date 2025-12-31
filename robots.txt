@@ -63,3 +63,51 @@ Disallow: /package.json
 Disallow: /composer.json
 Disallow: /yarn.lock
 Disallow: /package-lock.json
+# Safety Training Manager - Robots.txt
+# https://safety-training-manager.vercel.app
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://safety-training-manager.vercel.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Allow search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0.5
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Development files
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /*.php$
+Disallow: /*.asp$
+
+# Directories
+Disallow: /includes/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /logs/
