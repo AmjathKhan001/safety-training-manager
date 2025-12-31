@@ -1,86 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main Pages - Root Directory -->
+    <!-- Main Pages in Root Directory -->
     <url>
-        <loc>https://safetytraininghub.com/</loc>
+        <loc>https://safety-training-manager.vercel.app/</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://safetytraininghub.com/attendance.html</loc>
+        <loc>https://safety-training-manager.vercel.app/attendance.html</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://safetytraininghub.com/certificate.html</loc>
+        <loc>https://safety-training-manager.vercel.app/certificate.html</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://safetytraininghub.com/404.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
-    </url>
-    
-    <!-- Pages Directory -->
-    <url>
-        <loc>https://safetytraininghub.com/pages/blog.html</loc>
+        <loc>https://safety-training-manager.vercel.app/blog.html</loc>
         <lastmod>2024-12-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://safetytraininghub.com/pages/tools.html</loc>
-        <lastmod>2024-12-01</lastmod>
+        <loc>https://safety-training-manager.vercel.app/tools.html</loc>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://safetytraininghub.com/pages/training-programs.html</loc>
-        <lastmod>2024-12-01</lastmod>
+        <loc>https://safety-training-manager.vercel.app/training-programs.html</loc>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://safetytraininghub.com/pages/privacy.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://safetytraininghub.com/pages/terms.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://safetytraininghub.com/pages/affiliate-disclosure.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://safetytraininghub.com/pages/sitemap.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
     
-    <!-- Static Files -->
+    <!-- Legal Pages (keep in pages directory) -->
     <url>
-        <loc>https://safetytraininghub.com/sitemap.xml</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.1</priority>
-    </url>
-    <url>
-        <loc>https://safetytraininghub.com/robots.txt</loc>
-        <lastmod>2024-12-01</lastmod>
+        <loc>https://safety-training-manager.vercel.app/pages/privacy.html</loc>
+        <lastmod>2025-12-31</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
+        <priority>0.3</priority>
     </url>
+    <url>
+        <loc>https://safety-training-manager.vercel.app/pages/terms.html</loc>
+        <lastmod>2025-12-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <!-- ... other legal pages -->
 </urlset>
