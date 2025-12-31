@@ -271,27 +271,33 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">
-                <img src="../assets/logo.png" alt="Safety Training Manager Logo" height="40">
-                <span>Safety Training Manager</span>
+<header>
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-certificate logo-icon"></i>
+                <div class="logo-text">
+                    <span class="logo-main">Safety Training</span>
+                    <span class="logo-sub">Manager</span>
+                </div>
             </a>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../attendance.html">Attendance</a></li>
-                <li><a href="../certificate.html">Certificate</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="tools.html">Tools</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="../attendance.html" class="nav-link"><i class="fas fa-clipboard-list"></i> Attendance</a>
+                <a href="../certificate.html" class="nav-link"><i class="fas fa-award"></i> Certificate</a>
+                <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                <a href="tools.html" class="nav-link"><i class="fas fa-tools"></i> Tools</a>
+                <a href="training-programs.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Training Programs</a>
             </div>
-        </div>
-    </nav>
-
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
     <!-- 404 Error Content -->
     <main class="error-page">
         <div class="error-container">
@@ -380,15 +386,17 @@
                 <h3>Safety Training Manager</h3>
                 <p>Free tools for safety professionals to manage training, attendance, and certifications.</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../attendance.html">Attendance Sheet</a></li>
-                    <li><a href="../certificate.html">Certificate Generator</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
+          <div class="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                  <li><a href="../attendance.html"><i class="fas fa-clipboard-list"></i> Attendance Sheet</a></li>
+                  <li><a href="../certificate.html"><i class="fas fa-award"></i> Certificate Generator</a></li>
+                  <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                  <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+                  <li><a href="training-programs.html"><i class="fas fa-graduation-cap"></i> Training Programs</a></li>
+              </ul>
+</div>
             <div class="footer-section">
                 <h4>Legal</h4>
                 <ul>
@@ -400,7 +408,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Safety Training Manager. All rights reserved.</p>
+            <p>&copy; 2025 www.safetytrainingmanager.com. All rights reserved.</p>
             <p class="visitor-counter">Visitors: <span id="visitorCount">Loading...</span></p>
         </div>
     </footer>
