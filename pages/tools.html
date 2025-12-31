@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSE Tools | Complete Collection of Safety Tools & Resources</title>
+    <meta name="description" content="Complete collection of professional HSE tools, fire safety calculators, utility tools, and design tools for safety professionals.">
+    <meta name="keywords" content="HSE tools, safety resources, fire safety calculators, fire extinguisher tools, utility tools, design tools, PPE tools">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Tools Page CSS -->
+    <style>
+        .tools-hero {
+            background: linear-gradient(135deg, rgba(52, 191, 73, 0.1) 0%, rgba(0, 153, 229, 0.1) 100%);
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        
+        .tools-container {
+            padding: 40px 0;
+        }
+        
+        .tools-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .tool-category {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f2ff;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .category-1 .category-icon { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .category-2 .category-icon { background: linear-gradient(135deg, #ff4c4c, #ff9966); }
+        .category-3 .category-icon { background: linear-gradient(135deg, #0099e5, #34bf49); }
+        .category-4 .category-icon { background: linear-gradient(135deg, #ff9800, #ffcc00); }
+        .category-5 .category-icon { background: linear-gradient(135deg, #9c27b0, #673ab7); }
+        
+        .category-header h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background: #f8f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: white;
+        }
+        
+        .tool-card h3 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tool-card h3 i {
+            color: #667eea;
+        }
+        
+        .tool-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .tool-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #667eea;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-link:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .category-count {
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        /* Social Sharing */
+        .social-sharing {
+            margin-top: 50px;
+        }
+        
+        .social-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .social-card.compact {
+            padding: 20px;
+        }
+        
+        .social-card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .social-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-btn.facebook { background: #3b5998; }
+        .social-btn.twitter { background: #1da1f2; }
+        .social-btn.linkedin { background: #0077b5; }
+        .social-btn.whatsapp { background: #25d366; }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="HSE Calculator Logo" class="logo-img">
+                    <span>HSE Calculator</span>
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="all-calculators.html" class="nav-link"><i class="fas fa-calculator"></i> All Calculators</a>
+                    <a href="products.html" class="nav-link"><i class="fas fa-shopping-bag"></i> Safety Products</a>
+                    <a href="tools.html" class="nav-link active"><i class="fas fa-tools"></i> Tools</a>
+                    <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tools Hero -->
+    <section class="tools-hero">
+        <div class="container">
+            <h1>Complete HSE Tools Collection</h1>
+            <p>Explore professional tools for health, safety, and environment management</p>
+        </div>
+    </section>
+
+    <!-- Tools Container -->
+    <section class="tools-container">
+        <div class="container">
+            <div class="tools-categories">
+                <!-- Category 1: HSE Tools -->
+                <div class="tool-category category-1">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div>
+                            <h2>HSE Tools <span class="category-count">2 Tools</span></h2>
+                            <p style="color: #666; margin: 5px 0 0; font-size: 0.95rem;">Health, Safety & Environment calculators and toolkits</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- HSE Calculators -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-calculator"></i> HSE Calculators</h3>
+                            <p class="tool-description">Professional health, safety, and environment calculators for risk assessment, noise exposure, chemical exposure, and more.</p>
+                            <a href="https://www.hsecalculator.com/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- HSE Tools -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-toolbox"></i> HSE Tools</h3>
+                            <p class="tool-description">Comprehensive health and safety toolkit with templates, checklists, and safety management tools.</p>
+                            <a href="https://hse-toolkit.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Fire Safety Tools -->
+                <div class="tool-category category-2">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-fire-extinguisher"></i>
+                        </div>
+                        <div>
+                            <h2>Fire Safety Tools <span class="category-count">8 Tools</span></h2>
+                            <p style="color: #666; margin: 5px 0 0; font-size: 0.95rem;">Fire safety calculators, estimation tools, and assessment systems</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- Ceiling Mounted Fire Extinguisher Estimation Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-arrow-up"></i> Ceiling Mounted Fire Extinguisher Estimation Tool</h3>
+                            <p class="tool-description">Estimation tool for ceiling-mounted fire extinguisher systems and placement calculations.</p>
+                            <a href="https://safetyguide360-ceilingmounted-firee.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Fire Safety Calculators -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-calculator"></i> Fire Safety Calculators</h3>
+                            <p class="tool-description">Comprehensive fire safety calculation tools for various fire protection scenarios.</p>
+                            <a href="https://www.firesafetytool.com/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Fire Extinguisher Health Checkup Audit Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-clipboard-check"></i> Fire Extinguisher Health Checkup Audit Tool</h3>
+                            <p class="tool-description">Audit tool for fire extinguisher maintenance, inspection, and compliance checking.</p>
+                            <a href="https://safetyguide360-fire-extinguisher-au.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Fire Safety Assessment Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-shield-alt"></i> Fire Safety Assessment Tool</h3>
+                            <p class="tool-description">Comprehensive fire safety risk assessment and compliance evaluation tool.</p>
+                            <a href="https://safetyguide360-firesafety-assessmen.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Fire Extinguisher Estimation Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-fire-extinguisher"></i> Fire Extinguisher Estimation Tool</h3>
+                            <p class="tool-description">Calculate fire extinguisher requirements based on area coverage and fire risk.</p>
+                            <a href="https://safetyguide360-fire-extinguisher-ca.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Kitchen Suppression System Estimation Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-utensils"></i> Kitchen Suppression System Estimation Tool</h3>
+                            <p class="tool-description">Estimation tool for commercial kitchen fire suppression system requirements.</p>
+                            <a href="https://safetyguide360-kitchen-fire-suppres.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Room Flooding System Estimation Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-water"></i> Room Flooding System Estimation Tool</h3>
+                            <p class="tool-description">Estimation tool for room flooding fire suppression systems and calculations.</p>
+                            <a href="https://safetyguide360-room-flooding-system.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Panel Fire Suppression Calculator -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-server"></i> Panel Fire Suppression Calculator</h3>
+                            <p class="tool-description">Calculate fire suppression requirements for electrical panels and equipment rooms.</p>
+                            <a href="https://safetyguide360-panel-fire-suppressi.vercel.app/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Utility Tools -->
+                <div class="tool-category category-3">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h2>Utility Tools <span class="category-count">2 Tools</span></h2>
+                            <p style="color: #666; margin: 5px 0 0; font-size: 0.95rem;">Daily productivity and web utility tools</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- Utility Tools -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-lightbulb"></i> Utility Tools</h3>
+                            <p class="tool-description">Collection of daily utility tools for productivity, calculations, and smart solutions.</p>
+                            <a href="https://www.dailysmarttool.com/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                        
+                        <!-- Web Tools Daily -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-globe"></i> Web Tools Daily</h3>
+                            <p class="tool-description">Daily updated web tools for developers, designers, and digital professionals.</p>
+                            <a href="https://www.webtoolsdaily.com/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Designing Tools -->
+                <div class="tool-category category-4">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div>
+                            <h2>Designing Tools <span class="category-count">1 Tool</span></h2>
+                            <p style="color: #666; margin: 5px 0 0; font-size: 0.95rem;">Creative and design tools for safety signage and documentation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- Designing Tool -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-text-height"></i> Designing Tool</h3>
+                            <p class="tool-description">Advanced text design tool for creating professional safety signs, labels, and documentation.</p>
+                            <a href="https://www.auratext.online/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: PPE Marts -->
+                <div class="tool-category category-5">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div>
+                            <h2>PPE Marts <span class="category-count">1 Tool</span></h2>
+                            <p style="color: #666; margin: 5px 0 0; font-size: 0.95rem;">Personal protective equipment marketplace and calculators</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- PPE Marts and Calculator -->
+                        <div class="tool-card">
+                            <h3><i class="fas fa-shopping-cart"></i> PPE Marts and Calculator</h3>
+                            <p class="tool-description">Marketplace for personal protective equipment with integrated selection calculators.</p>
+                            <a href="https://www.ppemarts.com/" target="_blank" class="tool-link">
+                                <i class="fas fa-external-link-alt"></i> Open Tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics Section -->
+            <div style="background: #f8f9ff; padding: 30px; border-radius: 15px; margin: 50px 0; text-align: center;">
+                <h2 style="color: #333; margin-bottom: 20px;">Tools Overview</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #667eea;">13</div>
+                        <div style="color: #666;">Total Tools</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #ff4c4c;">8</div>
+                        <div style="color: #666;">Fire Safety Tools</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #0099e5;">5</div>
+                        <div style="color: #666;">Categories</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: #34bf49;">100%</div>
+                        <div style="color: #666;">Free Tools</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Sharing Section -->
+            <section class="social-sharing">
+                <div class="container">
+                    <div class="social-card compact">
+                        <h3>Share These Tools</h3>
+                        <p>Help other safety professionals discover these free resources</p>
+                        <div class="social-buttons">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://hse-calculator.vercel.app/pages/tools.html" target="_blank" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=https://hse-calculator.vercel.app/pages/tools.html&text=Check%20out%20these%20free%20HSE%20tools%20for%20safety%20professionals!" target="_blank" class="social-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://hse-calculator.vercel.app/pages/tools.html" target="_blank" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?text=Free%20HSE%20Tools%20Collection:%20https://hse-calculator.vercel.app/pages/tools.html" target="_blank" class="social-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo.png" alt="HSE Calculator Logo" class="logo-img">
+                        <span>HSE Calculator</span>
+                    </a>
+                    <p>Professional tools for health, safety, and environment professionals.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Amjathkhan.s" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/amjikhan" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amjathkhan_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amjathkhan-shiekusman/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://bsky.app/profile/amjathkhan.bsky.social" target="_blank"><i class="fas fa-feather"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="all-calculators.html">All Calculators</a></li>
+                        <li><a href="products.html">Safety Products</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Support Our Work</h4>
+                    <p>Help us maintain and improve these free tools</p>
+                    <a href="https://buymeacoffee.com/s.amjathkhan" target="_blank" class="btn btn-primary btn-small mt-2" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-mug-hot"></i> Buy Me a Coffee
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 HSE Calculator. All rights reserved.</p>
+                <p>Professional tools for workplace safety and compliance</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
